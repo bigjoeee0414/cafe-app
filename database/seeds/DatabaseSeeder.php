@@ -5,12 +5,15 @@ use Illuminate\Database\Seeder;
 class DatabaseSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * データベース初期値設定の実行
      *
      * @return void
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        $this->call([
+        UsersTableSeeder::class,
+        TestUserSeeder::class
+        ]);
     }
 }
